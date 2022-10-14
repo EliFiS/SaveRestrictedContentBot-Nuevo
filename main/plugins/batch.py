@@ -34,17 +34,17 @@ async def get_pvt_content(event, chat, id):
 async def _batch(event):
     if not event.is_private:
         return
-    # wtf is the use of fsub here if the command is meant for the owner? 
-    # well am too lazy to clean 
+    # ¿Cuál es el uso de fsub aquí si el comando está destinado al propietario? 
+    # Bueno soy demasiado perezosa para limpiar
     s, r = await force_sub(event.client, fs, event.sender_id, ft) 
     if s == True:
         await event.reply(r)
         return       
     if f'{event.sender_id}' in batch:
-        return await event.reply("You've already started one batch, wait for it to complete you dumbfuck owner!")
+        return await event.reply("Ya comenzaste un lote, ¡espera a que se complete, tu tonto dueño!")
     async with Drone.conversation(event.chat_id) as conv: 
         if s != True:
-            await conv.send_message("Send me the message link you want to start saving from, as a reply to this message.", buttons=Button.force_reply())
+            await conv.send_message("Envíame el enlace del mensaje desde el que deseas comenzar a guardar, como respuesta a este mensaje.", buttons=Button.force_reply())
             try:
                 link = await conv.get_reply()
                 try:
@@ -53,19 +53,19 @@ async def _batch(event):
                     await conv.send_message("No link found.")
             except Exception as e:
                 print(e)
-                return await conv.send_message("Cannot wait more longer for your response!")
-            await conv.send_message("Send me the number of files/range you want to save from the given message, as a reply to this message.", buttons=Button.force_reply())
+                return await conv.send_message("¡No puedo esperar más por tu respuesta!")
+            await conv.send_message("Envíeme la cantidad de archivos/rango que desea guardar del mensaje dado, como respuesta a este mensaje.", buttons=Button.force_reply())
             try:
                 _range = await conv.get_reply()
             except Exception as e:
                 print(e)
-                return await conv.send_message("Cannot wait more longer for your response!")
+                return await conv.send_message("¡No puedo esperar más por tu respuesta!")
             try:
                 value = int(_range.text)
                 if value > 100:
-                    return await conv.send_message("You can only get upto 100 files in a single batch.")
+                    return await conv.send_message("Solo puede obtener hasta 100 archivos en un solo lote.")
             except ValueError:
-                return await conv.send_message("Range must be an integer!")
+                return await conv.send_message("¡El rango debe ser un número entero!")
             s, r = await check(userbot, Bot, _link)
             if s != True:
                 await conv.send_message(r)
@@ -95,7 +95,7 @@ async def run_batch(userbot, client, sender, link, _range):
         except FloodWait as fw:
             await asyncio.sleep(fw.seconds + 5)
             await get_bulk_msg(userbot, client, sender, link, i)
-        protection = await client.send_message(sender, f"Sleeping for `{timer}` seconds to avoid Floodwaits and Protect account!")
+        protection = await client.send_message(sender, f"Durmiendo por `{timer}` segundos para evitar Floodwaits y proteger la cuenta!")
         time.sleep(timer)
         await protection.delete()
             
