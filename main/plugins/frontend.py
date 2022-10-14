@@ -1,4 +1,4 @@
-#Github.com/8769Anurag
+#Github.com/EliFiS
 
 import time, os
 
@@ -12,13 +12,13 @@ from telethon import events
 
 from ethon.telefunc import force_sub
 
-ft = f"To use this bot you've to join @{fs}."
+ft = f"Para usar este bot tienes que unirte @{fs}."
 
-message = "Send me the message link you want to start saving from, as a reply to this message."
+message = "Envíame el enlace del mensaje desde el que deseas comenzar a guardar, como respuesta a este mensaje."
           
-# To-Do:
-# Make these codes shorter and clean
-# ofc will never do it. 
+# Que hacer:
+# Haga estos códigos más cortos y limpios
+# ofc nunca lo hará.
 
 @Drone.on(events.NewMessage(incoming=True, func=lambda e: e.is_private))
 async def clone(event):
