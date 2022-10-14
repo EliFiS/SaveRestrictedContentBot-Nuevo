@@ -2,17 +2,17 @@
   <b>Save restricted content Bot</b>
 </h1> 
 
-Contact: [Telegram](https://t.me/sources_cods)
+Contacto: [Telegrama](https://t.me/sources_cods)
 
-A stable telegram bot to get restricted messages with custom thumbnail support , made by Mahesh Chauhan. 
+Un bot estable de Telegram para recibir mensajes restringidos con compatibilidad con miniaturas personalizadas, creado por Mahesh Chauhan.
 
-- works for both public and private channels
-- Custom thumbnail support for Pvt medias
-- supports text and webpage media messages
-- Faster speed
-- Forcesubscribe available 
-- `/batch` - (For owner only) Use this command to save upto 100 files from a pvt or public restricted channel at once.
-- Time delay is added to avoid FloodWait and keep user account safe. 
+- obras para canales públicos y privados
+- Compatibilidad con miniaturas personalizadas para medios Pvt
+- admite mensajes multimedia de texto y páginas web
+- Velocidad más rápida
+- Forcesubscribe disponible
+- `/batch` - (Solo para el propietario) Use este comando para guardar hasta 100 archivos de un canal privado o público restringido a la vez.
+Se agrega un retraso de tiempo para evitar FloodWait y mantener segura la cuenta del usuario.
 
 # Variables
 
@@ -20,8 +20,8 @@ A stable telegram bot to get restricted messages with custom thumbnail support ,
 - `API_HASH`
 - `SESSION`
 - `BOT_TOKEN` 
-- `AUTH` - Owner user id
-- `FORCESUB` - Public channel username without '@'. Don't forget to add bot in channel as administrator. 
+- `AUTH` - Owner user id (Telegram ID)
+- `FORCESUB` - Nombre de usuario del canal público sin '@' (CREAR CANAL SI NO POSEE). No olvide agregar bot en el canal como administrador.
 
 # Get API & PYROGRAM string session from:
  
@@ -39,19 +39,19 @@ Tutorial - [Click here](https://t.me/sources_cods)
 
 Deploy your bot on `heroku`
 
-» Method - 1:
-- Star the repo, and fork it in desktop mode
-- Go to settings of your forked repo
-- Rename your repo by any other name
+" Método 1:
+- Destacar el repositorio y bifurcarlo en modo de escritorio
+- Vaya a la configuración de su repositorio bifurcado
+- Cambie el nombre de su repositorio por cualquier otro nombre
 - Click on  [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
  
-» Method - 2:
-- Star the repo, and fork it in desktop mode
-- create app in heroku
-- go to settings of app›› config vars›› add all variables
-- add buildpacks
-- connect to github and deploy
-- turn on dynos
+» Método - 2:
+- Destacar el repositorio y bifurcarlo en modo de escritorio
+- crear aplicación en heroku
+- vaya a la configuración de la aplicación ›› config vars›› agregue todas las variables
+- agregar paquetes de compilación
+- conectarse a github y desplegar
+- encienda los Dyno
   
 Buildpacks for manual deploy:
 
