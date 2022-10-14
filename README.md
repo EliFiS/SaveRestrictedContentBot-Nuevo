@@ -2,7 +2,7 @@
   <b>Save restricted content Bot</b>
 </h1> 
 
-Contacto: [Telegrama](https://t.me/sources_cods)
+Contacto: [Telegrama]([t.me/EliFiS_Official)
 
 Un bot estable de Telegram para recibir mensajes restringidos con compatibilidad con miniaturas personalizadas, creado por Mahesh Chauhan.
 
@@ -23,7 +23,7 @@ Se agrega un retraso de tiempo para evitar FloodWait y mantener segura la cuenta
 - `AUTH` - Owner user id (Telegram ID)
 - `FORCESUB` - Nombre de usuario del canal público sin '@' (CREAR CANAL SI NO POSEE). No olvide agregar bot en el canal como administrador.
 
-# Get API & PYROGRAM string session from:
+# Obtenga la sesión de cadena API & PYROGRAM de:
  
 API: [API scrapper Bot](https://t.me/USERS_RO_BOT) or [Telegram.org](https://my.telegram.org/auth)
 
@@ -31,21 +31,20 @@ PYROGRAM SESSION: [SessionGen Bot](https://t.me/SessionString_Ro_Bot) or [![Run 
 
 BOT TOKEN: @Botfather on telegram
 
-# Deploy
+# Implementa
 
-Deploy your bot on `Render`
+Implementa tu bot en `Render`
+Tutorial - [Click here](https://telegra.ph/SRCB-on-Render-05-17)
 
-Tutorial - [Click here](https://t.me/sources_cods)
+Implementa tu bot en `heroku`
 
-Deploy your bot on `heroku`
-
-" Método 1:
+» Método 1:
 - Destacar el repositorio y bifurcarlo en modo de escritorio
 - Vaya a la configuración de su repositorio bifurcado
 - Cambie el nombre de su repositorio por cualquier otro nombre
 - Click on  [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
  
-» Método - 2:
+» Método 2:
 - Destacar el repositorio y bifurcarlo en modo de escritorio
 - crear aplicación en heroku
 - vaya a la configuración de la aplicación ›› config vars›› agregue todas las variables
@@ -53,13 +52,13 @@ Deploy your bot on `heroku`
 - conectarse a github y desplegar
 - encienda los Dyno
   
-Buildpacks for manual deploy:
+Paquetes de compilación para implementación manual:
 
 - `heroku/python`
 - `https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git`
 
-Deploy your bot on `Okteto` [Useless]
+Deploy tu bot en `Okteto` [Useless]
   
-Tutorial for okteto - [click here](https://t.me/sources_cods)
+Tutorial desde okteto - [click here](https://telegra.ph/Okteto-Deploy-04-01)
 
 [![Develop on Okteto](https://okteto.com/develop-okteto.svg)](https://cloud.okteto.com)
