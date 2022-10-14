@@ -1,4 +1,4 @@
-# Github.com/8769Anurag
+# Github.com/EliFiS
 
 import asyncio, time, os
 
@@ -25,16 +25,16 @@ async def check(userbot, client, link):
             await userbot.get_messages(chat, msg_id)
             return True, None
         except ValueError:
-            return False, "**Invalid Link!**"
+            return False, "**¡Enlace no válido!**"
         except Exception:
-            return False, "Have you joined the channel?"
+            return False, "¿Te has unido al canal?"
     else:
         try:
             chat = str(link.split("/")[-2])
             await client.get_messages(chat, msg_id)
             return True, None
         except Exception:
-            return False, "Maybe bot is banned from the chat, or your link is invalid!"
+            return False, "¡Tal vez el bot está prohibido en el chat o su enlace no es válido!"
             
 async def get_msg(userbot, client, sender, edit_id, msg_link, i):
     edit = ""
@@ -62,12 +62,12 @@ async def get_msg(userbot, client, sender, edit_id, msg_link, i):
                 progress=progress_for_pyrogram,
                 progress_args=(
                     client,
-                    "**DOWNLOADING:**\n",
+                    "**DESCARGANDO:**\n",
                     edit,
                     time.time()
                 )
             )
-            await edit.edit('Preparing to Upload!')
+            await edit.edit('¡Preparándose para subir!')
             caption = str(file)
             if msg.caption is not None:
                 caption = msg.caption
@@ -89,13 +89,13 @@ async def get_msg(userbot, client, sender, edit_id, msg_link, i):
                     progress=progress_for_pyrogram,
                     progress_args=(
                         client,
-                        '**UPLOADING:**\n',
+                        '**SUBIENDO:**\n',
                         edit,
                         time.time()
                     )
                 )
             elif str(file).split(".")[-1] in ['jpg', 'jpeg', 'png', 'webp']:
-                await edit.edit("Uploading photo.")
+                await edit.edit("Subiendo foto.")
                 await bot.send_file(sender, file, caption=caption)
             else:
                 thumb_path=thumbnail(sender)
@@ -107,14 +107,14 @@ async def get_msg(userbot, client, sender, edit_id, msg_link, i):
                     progress=progress_for_pyrogram,
                     progress_args=(
                         client,
-                        '**UPLOADING:**\n',
+                        '**SUBIENDO:**\n',
                         edit,
                         time.time()
                     )
                 )
             await edit.delete()
         except (ChannelBanned, ChannelInvalid, ChannelPrivate, ChatIdInvalid, ChatInvalid):
-            await client.edit_message_text(sender, edit_id, "Have you joined the channel?")
+            await client.edit_message_text(sender, edit_id, "¿Te has unido al canal?")
             return 
         except Exception as e:
             await client.edit_message_text(sender, edit_id, f'Failed to save: `{msg_link}`')
@@ -130,5 +130,5 @@ async def get_msg(userbot, client, sender, edit_id, msg_link, i):
         await edit.delete()
         
 async def get_bulk_msg(userbot, client, sender, msg_link, i):
-    x = await client.send_message(sender, "Processing!")
+    x = await client.send_message(sender, "¡Procesando!")
     await get_msg(userbot, client, sender, x.message_id, msg_link, i) 
