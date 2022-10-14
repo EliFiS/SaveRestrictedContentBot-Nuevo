@@ -6,9 +6,9 @@ Contacto: [Telegrama](https://t.me/EliFiS_Official)
 
 Un bot estable de Telegram para recibir mensajes restringidos con compatibilidad con miniaturas personalizadas, creado por Mahesh Chauhan.
 
-- obras para canales públicos y privados
+- Trabaja en canales públicos y privados
 - Compatibilidad con miniaturas personalizadas para medios Pvt
-- admite mensajes multimedia de texto y páginas web
+- Admite mensajes multimedia de texto y páginas web
 - Velocidad más rápida
 - Forcesubscribe disponible
 - `/batch` - (Solo para el propietario) Use este comando para guardar hasta 100 archivos de un canal privado o público restringido a la vez.
