@@ -15,22 +15,22 @@ async def sett(event):
     msg = await button.get_reply_message() 
     await event.delete()
     async with Drone.conversation(event.chat_id) as conv: 
-        xx = await conv.send_message("Send me any image for thumbnail as a `reply` to this message.")
+        xx = await conv.send_message("Envíame cualquier imagen para miniatura como `respuesta` a este mensaje.")
         x = await conv.get_reply()
         if not x.media:
-            xx.edit("No media found.")
+            xx.edit("No se encontraron medios.")
         mime = x.file.mime_type
         if not 'png' in mime:
             if not 'jpg' in mime:
                 if not 'jpeg' in mime:
-                    return await xx.edit("No image found.")
+                    return await xx.edit("No se encontró ninguna imagen.")
         await xx.delete()
         t = await event.client.send_message(event.chat_id, 'Trying.')
         path = await event.client.download_media(x.media)
         if os.path.exists(f'{event.sender_id}.jpg'):
             os.remove(f'{event.sender_id}.jpg')
         os.rename(path, f'./{event.sender_id}.jpg')
-        await t.edit("Temporary thumbnail saved!")
+        await t.edit("¡Miniatura temporal guardada!")
         
 @Drone.on(events.callbackquery.CallbackQuery(data="rem"))
 async def remt(event):  
@@ -40,10 +40,10 @@ async def remt(event):
         os.remove(f'{event.sender_id}.jpg')
         await event.edit('Removed!')
     except Exception:
-        await event.edit("No thumbnail saved.")                        
+        await event.edit("No se ha guardado ninguna miniatura.")                        
   
 @Drone.on(events.NewMessage(incoming=True, pattern=f"{S}"))
 async def start(event):
-    text = "Send me Link of any message to clone it here, For private channel message, send invite link first.\n\n**SUPPORT:** @movies_zilaa"
+    text = "Envíeme el enlace de cualquier mensaje para clonarlo aquí. Para el mensaje de canal privado, envíe primero el enlace de invitación.\n\n**APOYO:** @EliFiS_Official"
     await start_srb(event, text)
     
