@@ -2,7 +2,7 @@
   <b>Save restricted content Bot</b>
 </h1> 
 
-Contacto: [Telegrama]([https://t.me/EliFiS_Official)
+Contacto: [Telegrama](https://t.me/EliFiS_Official)
 
 Un bot estable de Telegram para recibir mensajes restringidos con compatibilidad con miniaturas personalizadas, creado por Mahesh Chauhan.
 
